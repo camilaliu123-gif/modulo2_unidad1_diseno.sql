@@ -1,0 +1,21 @@
+CREATE DATABASE Modulo2_unidad1_diseno;
+
+USE Modulo2_unidad1_diseno;
+
+CREATE TABLE Clientes(
+ID_Cliente int not null identity(1,1) Primary key,
+Nombre varchar (100),
+Perfil_bio text,
+Fecha_registro DATE
+);
+
+Select * From Clientes;
+
+CREATE TABLE Productos(
+ID_Producto INT NOT NULL identity (1,1) Primary Key,
+Descripcion varchar(255),
+Precio decimal(10,2),
+Esta_activo text
+);
+
+--Elegi cada tipo de dato porque el int es para número enteros sin decimales como el codigo id. Luego, use decimal para el precio ya que es el estandar para dinero. En el caso de varchar lo use para nombres y que me indica la cantidad de caracteres maximos. Luego, text para cuando son textos muy largo como en perfil_bio o en esta_activo. Por último, use date para la fechas de registro. 
