@@ -3,8 +3,8 @@ CREATE TABLE Clientes(
 ID_Cliente int not null identity(1,1) Primary key,
 -- Texto de hasta 100 caracteres para describir el nombre
 Nombre varchar (100),
--- Texto ya que es un campo que el tipo de dato es largo
-Perfil_bio text,
+-- Texto de hasta 100 caracteres para describir el perfil
+Perfil_bio VARCHAR(100),
 -- Date es usado para fecha de registro y que indique en formato de fecha
 Fecha_registro DATE
 );
@@ -17,6 +17,6 @@ Descripcion varchar(255),
  -- Precio con dos decimales para evitar errores de precisión
 Precio decimal(10,2),
  -- TRUE si el producto está activo y FALSE si no lo está
-Esta_activo BOOLEAN
+Esta_activo BIT
 );
 
