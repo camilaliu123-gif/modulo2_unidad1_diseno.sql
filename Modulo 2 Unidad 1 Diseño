@@ -1,22 +1,22 @@
 CREATE TABLE Clientes(
  -- Número entero para identificar cada producto
-ID_Cliente int not null identity(1,1) Primary key,
+id_Cliente int not null identity(1,1) Primary key,
 -- Texto de hasta 100 caracteres para describir el nombre
-Nombre varchar (100),
--- Texto de hasta 100 caracteres para describir el perfil
-Perfil_bio VARCHAR(100),
+nombre varchar (100),
+-- Texto que no tiene max de caracteres. 
+perfil_bio VARCHAR(MAX),
 -- Date es usado para fecha de registro y que indique en formato de fecha
-Fecha_registro DATE
+fecha_registro DATE
 );
 
 CREATE TABLE Productos(
  -- Número entero para identificar cada producto
-ID_Producto INT NOT NULL identity (1,1) Primary Key,
+id_producto INT NOT NULL identity (1,1) Primary Key,
 -- Texto de hasta 255 caracteres para describir el producto
-Descripcion varchar(255),
+descripcion varchar(255),
  -- Precio con dos decimales para evitar errores de precisión
-Precio decimal(10,2),
+precio decimal(10,2),
  -- TRUE si el producto está activo y FALSE si no lo está
-Esta_activo BIT
+esta_activo BIT
 );
 
